@@ -27,7 +27,9 @@ void print_list(node *head) {
 node * insert_node(node *head, int data) {
     node *new_node=create_node(data);
     new_node->next = head;
-    head->prev = NULL;
+    if (head!=NULL) {
+        head->prev = new_node;
+    }
     return new_node;
 }
 int main(){

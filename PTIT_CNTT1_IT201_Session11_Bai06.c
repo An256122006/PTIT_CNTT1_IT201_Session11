@@ -27,7 +27,9 @@ void print_list(node *head) {
 node * dele_node(node *head) {
    node *temp = head;
    head = head->next;
-   head->prev = NULL;
+   if (head!=NULL) {
+      head->prev = NULL;
+   }
    free(temp);
    return head;
 }
